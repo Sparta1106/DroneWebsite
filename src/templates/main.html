@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src/accounts/templates/accounts/main.html
 <!DOCTYPE>
 <html>
     <head>
@@ -23,3 +24,26 @@
 </html>
 
 
+=======
+<!DOCTYPE>
+<html>
+    <head>
+        <title>Main Template</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+
+    <body>
+        {% include 'accounts/navbar.html' %}
+        
+        <hr>
+            {% block content %}
+            <!-- Child template's lives in here -->
+
+            {% endblock %}
+        </hr>
+        
+        
+    </body>
+
+</html>
+>>>>>>> 7316f569147ea46305032aeab4238831c35f3780:src/templates/main.html
