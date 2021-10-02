@@ -1,4 +1,30 @@
-<!DOCTYPE>
+
+<!--Navigation Menu-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home <span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/products"> Products </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/customer"> Customer </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/aboutus"> About Us </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+<!--End of Navigation Menu-->
+
+<!DOCTYPE html>
 <html>
 
     <head>
@@ -12,7 +38,11 @@
     </head>
 
     <body>
-        {% include 'navbar.html' %}
+
+        <button onclick="getLocation()">Order</button>
+        <p id="demo"></p>
+
+
 
         <hr>
         {% block content %}
@@ -21,9 +51,124 @@
         {% endblock %}
         </hr>
 
-
+        <footer>
+            <div class="f-top">
+                <div class="container container-240">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <div class="footer-block footer-about">
+                                <div class="f-logo">
+                                    <a href="#"><img src="img/logo.png" alt="" class="img-reponsive"></a>
+                                </div>
+                                <ul class="footer-block-content">
+                                    <li class="address">
+                                        <span>5500 University Pkwy, San Bernardino, CA 92407</span>
+                                    </li>
+                                    <li class="phone">
+                                        <span>+1(909) 537-5000 </span>
+                                    </li>
+                                    <li class="email">
+                                        <span>TeamGladiators@yourcompany.com</span>
+                                    </li>
+                                    <li class="time">
+                                        <span>Mon-Fri 9:00pm - 5:00pm  &nbsp;&nbsp;&nbsp;  Sat-Sun : Closed</span>
+                                    </li>
+                                </ul>
+                                <div class="footer-social social">
+                                    <h3 class="footer-block-title">Follow us</h3>
+                                    <a href="#" class="fa fa-twitter"></a>
+                                    <a href="#" class="fa fa-dribbble"></a>
+                                    <a href="#" class="fa fa-behance"></a>
+                                    <a href="#" class="fa fa-instagram"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                            <div class="footer-block">
+                                <h3 class="footer-block-title">Quick menu</h3>
+                                <ul class="footer-block-content">
+                                    <li><a href="#">TV & Video</a></li>
+                                    <li><a href="#">Home Audio & Theater</a></li>
+                                    <li><a href="#">Camera, Photo & Video</a></li>
+                                    <li><a href="#">Cell Phones & Accessories</a></li>
+                                    <li><a href="#">Headphones</a></li>
+                                    <li><a href="#">Video Games</a></li>
+                                    <li><a href="#">Bluetooth & Wireless Speakers</a></li>
+                                    <li><a href="#">Car Electronics</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-2 col-lg-2">
+                            <div class="footer-block">
+                                <h3 class="footer-block-title">Customer Service</h3>
+                                <ul class="footer-block-content">
+                                    <li><a href="#">My Account</a></li>
+                                    <li><a href="#">Track your Order</a></li>
+                                    <li><a href="#">Returns/Exchange</a></li>
+                                    <li><a href="#">FAQs</a></li>
+                                    <li><a href="#">Customer Service</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                            <div class="footer-block">
+                                <div class="footer-block-phone">
+                                    <h3 class="footer-block-title">Hot Line</h3>
+                                    <p class="phone-desc">Call Us toll Free</p>
+                                    <p class="phone-light">(+123) 888-8888</p>
+                                </div>
+                                <div class="footer-block-newsletter">
+                                    <h3 class="footer-block-title">Subscription</h3>
+                                    <p>Register now to get updates on promotions and coupons.</p>
+                                    <form class="form_newsletter" action="#" method="post">
+                                        <input type="email" value="" placeholder="Enter your emaill adress" name="EMAIL" id="mail" class="newsletter-input form-control">
+                                        <button id="subscribe" class="button_mini btn btn-gradient" type="submit">
+                                            Subscribe
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="f-bottom">
+                <div class="container container-240">
+                    <div class="row flex lr">
+                        <div class="col-xs-6 f-copyright"><span>© 2021 TeamGladiators. All rights reserved.</span></div>
+                        <div class="col-xs-6 f-payment hidden-xs">
+                            <a href="#"><img src="img/payment/mastercard.png" alt="" class="img-reponsive"></a>
+                            <a href="#"><img src="img/payment/paypal.png" alt="" class="img-reponsive"></a>
+                            <a href="#"><img src="img/payment/visa.png" alt="" class="img-reponsive"></a>
+                            <a href="#"><img src="img/payment/american-express.png" alt="" class="img-reponsive"></a>
+                            <a href="#"><img src="img/payment/western-union.png" alt="" class="img-reponsive"></a>
+                            <a href="#"><img src="img/payment/jcb.png" alt="" class="img-reponsive"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </body>
 
+
+    <!--Script to gather geolocation-->
+    <script>
+    var x = document.getElementById("demo");
+    
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";
+      }
+    }
+    
+    function showPosition(position) {
+      x.innerHTML = "Latitude: " + position.coords.latitude + 
+      "<br>Longitude: " + position.coords.longitude;
+    }
+    </script>
+    <!--Geolocation script will be move to main.js file in the future-->
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
