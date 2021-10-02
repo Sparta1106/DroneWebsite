@@ -11,3 +11,5 @@ def products(request):
 def customer(request):
     return render(request, 'customer.html' )
 
+def home_view(request):
+    return render(request, 'dashboard.html')
