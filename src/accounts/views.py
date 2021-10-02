@@ -13,3 +13,6 @@ def customer(request):
 
 def home_view(request):
     return render(request, 'dashboard.html')
+
+def aboutus(request):
+    return render(request, 'aboutus.html')
