@@ -5,9 +5,12 @@ from django.http import HttpResponse
 
 # Calls(Render) the html file(template) located in templates/accounts/products.html
 def products(request):
-    return render(request, 'accounts/products.html')
+    return render(request, 'products.html')
 
 # Calls(Render) the html file(template) located in templates/accounts/customer.html
 def customer(request):
-    return render(request, 'accounts/customer.html' )
+    return render(request, 'customer.html' )
 
+
+def aboutus(request):
+    return render(request, 'aboutus.html')

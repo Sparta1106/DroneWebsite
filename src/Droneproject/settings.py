@@ -34,6 +34,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -41,8 +43,16 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     
-    'accounts', # the main application
-    'pages' #views and models of the main pages
+    # GLADIATORS' APPS:
+
+    # (tips: DO NOT FORGET THE COMMA)
+    # (feel free to add to these tips)
+
+    'accounts',     # the main application
+    'pages' ,        # views and models of the main pages
+    'products' ,     # products, def.: stuff to sell
+    'aboutus'
+
 ]
 
 MIDDLEWARE = [
