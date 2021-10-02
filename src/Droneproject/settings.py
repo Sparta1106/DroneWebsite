@@ -50,8 +50,7 @@ INSTALLED_APPS = [
 
     'accounts',     # the main application
     'pages' ,        # views and models of the main pages
-    'products' ,     # products, def.: stuff to sell
-    'aboutus'
+    'products'     # products, def.: stuff to sell
 
 ]
 
