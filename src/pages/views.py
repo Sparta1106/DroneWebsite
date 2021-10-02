@@ -5,3 +5,4 @@ from django.shortcuts import render
 # Calls(Render) the html file(template) located in templates/dashboard.html
 def home_view(request):
     return render(request, 'dashboard.html')
+
