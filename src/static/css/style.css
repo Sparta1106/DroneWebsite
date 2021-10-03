@@ -1,0 +1,30 @@
+.form-popup {
+    display: none;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+}
+
+.form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+}
+
+.form-container .btn {
+    background-color: #00cf34;
+    color: white;
+    padding: 8px 10px;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    margin-top:5px;
+    margin-bottom:5px;
+}
+
+.form-container .cancel {
+    background-color: red;
+}
+
+.form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+}

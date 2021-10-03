@@ -1,4 +1,4 @@
-
+{% load static %}
 <!--Navigation Menu-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#"></a>
@@ -35,12 +35,30 @@
         <!--
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         -->
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
     </head>
 
     <body>
 
         <button onclick="getLocation()">Order</button>
         <p id="demo"></p>
+
+        <div class="form-popup" id="myForm">
+          <form action="/action_page.php" class="form-container">
+            <h1>Coordinates</h1>
+        
+            <p>Instructions TBD</p> 
+
+            <label for="latitude"><b>Latitude</b></label>
+            <input type="number" step="0.000001"placeholder="0.000000" name="latitude" required>
+        
+            <label for="longitude"><b>Longitude</b></label>
+            <input type="number" step="0.000001"placeholder="0.000000" name="longitude" required>
+        
+            <button type="submit" class="btn">Submit</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+          </form>
+        </div>
 
 
 
@@ -156,13 +174,29 @@
     var x = document.getElementById("demo");
     
     function getLocation() {
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
-      } else { 
-        x.innerHTML = "Geolocation is not supported by this browser.";
-      }
+      if (/Android|iPhone|iPad/i.test(navigator.userAgent)){
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition,
+        function error(msg) {alert('Please enable your GPS position feature.');},
+        {maximumAge:10000, timeout:5000, enableHighAccuracy: true});
+        } else { 
+            x.innerHTML = "Geolocation is not supported by this browser. Please enter your coordinates.";
+            openForm()
+        }
+    } else { 
+        x.innerHTML = "Geolocation is not supported by this device. Please enter your coordinates.";
+        openForm()
+        }
     }
-    
+
+    function openForm() {
+    document.getElementById("myForm").style.display = "block";
+    }
+
+    function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+    }
+
     function showPosition(position) {
       x.innerHTML = "Latitude: " + position.coords.latitude + 
       "<br>Longitude: " + position.coords.longitude;
